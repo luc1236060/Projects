@@ -4,16 +4,13 @@ import java.util.Scanner;
 public class encrypt {
 	
 	
-	public static String encrypt(String plainString, int[] matrix, int matrixD) { //Does the Hill Cipher
+	public static String encrypter(String plainString, int[] matrix, int matrixD) { //Does the Hill Cipher
 		
 
 		char[] TempMessageArray = new char[10000];
 		int[] MessageArrayNum = new int[plainString.length()];
 		int[] encryptedArrayNum = new int[plainString.length()];
 		String encryptedString = "";
-		int mIndex = 0;
-		int pIndex = 0;
-		int eIndex = 0;
 		
 		for(int i = 0; i < plainString.length(); i++) { //Transfers plain text into char array
 			TempMessageArray[i] = plainString.charAt(i);
@@ -33,7 +30,7 @@ public class encrypt {
 				for (int col = 0; col < matrixD; col++) {
 					sum += matrix[row * matrixD + col] * MessageArrayNum[i + col];
 				}
-				encryptedArrayNum[i + row] = sum % 26; // mod 26 here directly
+				encryptedArrayNum[i + row] = sum % 26; //Mod 26 here directly
 			}
 		}
 			
@@ -127,10 +124,6 @@ public class encrypt {
 			}
 		}
 		
-		//for(int i = 0; i < x; i++) {
-		//	temp1[i] = temp1[i].replaceAll("null","");
-		//}
-		
 		for(int i = 0; i < x; i++) {
 			System.out.println(temp1[i]);
 		}
@@ -187,7 +180,7 @@ public class encrypt {
 		
 		String temp1String = tempString;
 		
-		temp1String = encrypt(tempString, matrixArray, matrix);
+		temp1String = encrypter(tempString, matrixArray, matrix);
 		
 		printText(tempString, temp1String);
 		

@@ -1,0 +1,10 @@
+
+Key matrix:
+   2   4
+   3   5
+
+Ciphertext:
+ethnfepshnhrsutoiiiuwruahrnxhfdvethnrwvecgjfyopqqanphhvezophnbhi
+
+Plaintext:
+thisistotestifthisworksexampleofthisworkingwillpopoutinsomething

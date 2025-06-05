@@ -7,12 +7,10 @@ java encrypt key.txt message.txt
 
 Key format:
 
-
 4
 2 2 2 1
 2 1 2 2
 1 2 3 4
-
 
 Message format:
 
